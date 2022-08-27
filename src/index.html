@@ -14,6 +14,121 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">
+            <a class="logo__link" href="./index.html">
+              <img
+                class="logo__ice-creame"
+                src="./images/header/ice-cream.png"
+                alt="Ice-cream"
+              />
+              <span class="logo__text">ce</span>
+            </a>
+          </div>
+          <nav class="menu__desctop">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link current" href="./index.html">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">About us</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">How it’s made?</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Our products</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__btn-list">
+            <button
+              class="menu__btn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg class="menu__icon" aria-label="перемикач мобмльного меню">
+                <use
+                  class="icon__burger"
+                  href="./images/header/sprite.svg#menu-burger"
+                ></use>
+                <use
+                  class="icon__cross"
+                  href="./images/header/sprite.svg#icon-close-menu-icon"
+                ></use>
+              </svg>
+            </button>
+            <button class="menu__buy-btn" type="button" data-modal-open>
+              Buy now
+              <svg class="icon__cheveron-right">
+                <use href="./images/header/sprite.svg#cheveron-right"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="menu__mobile" id="menu-container" data-menu>
+            <ul class="menu__mobil-list">
+              <li class="menu__mobil-item">
+                <a class="menu__mobil-link current" href="./index.html">Home</a>
+              </li>
+              <li class="menu__mobil-item">
+                <a class="menu__mobil-link" href="#">About us</a>
+              </li>
+              <li class="menu__mobil-item">
+                <a class="menu__mobil-link" href="#">How it’s made?</a>
+              </li>
+              <li class="menu__mobil-item">
+                <a class="menu__mobil-link" href="#">Our products</a>
+              </li>
+              <li class="menu__mobil-item">
+                <a class="menu__mobil-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <sectio class="hero">
+      <div class="conteiner">
+        <h1 class="hero__title">ice cream made with passion</h1>
+        <div class="hero__list">
+          <a href="" class="hero__link-prod">Products</a>
+          <a href="" class="hero__link-made">How it’s made?</a>
+        </div>
+        <div class="hero__img">
+          <div class="hero__ice-faces">
+            <img class="ice-cream" src="#" alt="#" />
+            <ul class="faces__list">
+              <li class="faces__item">
+                <img class="faces1" src="#" alt="#" />
+              </li>
+              <li class="faces__item">
+                <img class="faces2" src="#" alt="#" />
+              </li>
+              <li class="faces__item">
+                <img class="faces3" src="#" alt="#" />
+              </li>
+            </ul>
+          </div>
+          <img class="points" src="#" alt="#" />
+        </div>
+      </div>
+    </sectio>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn__close" type="button" data-modal-close>
+          <svg class="icon-cross" width="11" height="11">
+            <use href="./images/header/sprite.svg#icon-close-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <include src="./partials/header-hero.html"></include>
     <main>
       <include src="./partials/products.html"></include>
@@ -24,5 +139,7 @@
       <include src="./partials/contacts.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
+    <script src="./js/modal-menu.js"></script>
+    <script src="./js/modai.js"></script>
   </body>
 </html>
